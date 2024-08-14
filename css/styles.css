@@ -1,0 +1,393 @@
+/*GLOBAL*/
+
+*{
+    box-sizing: border-box;
+}
+
+.border{
+    border: 1px solid black;
+}
+
+body{
+    background: rgb(84, 85, 64);
+}
+
+/*LAYOUT*/
+
+.max-width,
+footer > .max-width {
+    width: 100%;
+    max-width: 1024px;
+    padding: 1em;
+    /* Common background color for both */
+    background: rgb(84, 85, 64);
+}
+
+footer > .max-width {
+    /* Override background color for the footer */
+    background: rgb(84, 85, 64);;
+}
+
+.max-width-container{
+    display: flex;
+    justify-content: center;
+}
+
+.section-grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}
+
+.section-grid > * {
+    grid-column: 1 / -1;
+}
+
+
+/* LAYOUT - Global Header*/
+
+.global-nav{
+    display: grid;
+    grid-template-columns: 2em 1fr 2em;
+    grid-template-rows: 2em;
+    grid-template-areas: "hamburger logo .";
+}
+
+.global-nav__hamburger-button{
+    grid-area: hamburger;
+}
+
+.global-nav__logo{
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+}
+
+.global-nav__links{
+    grid-area: links;
+    display: none;
+}
+
+@media (width >= 600px){
+    .global-nav{
+        grid-template-columns: max-content 1fr;
+        grid-template-areas: "logo links";
+    }
+    .global-nav__links{
+        display: block;
+    }
+
+    .global-nav__hamburger-button{
+        display: none;
+    }
+}
+
+/* LAYOUT - Global Footer */
+
+.global-footer__grid{
+    display: grid;
+    gap: 2em;
+    grid-template-areas: "copyright"
+                         "links"; 
+}
+
+.global-footer__copyright{
+    grid-area: copyright;
+}
+
+.global-footer__links{
+    grid-area: links;
+}
+
+/* LAYOUT - Home Page */
+
+.background-image{
+    background-image: url('../img/hero.gif');
+    background-size: cover;
+    height: 300px;
+}
+
+.site-hero__heading {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.site-hero .home-about{
+    display: none;
+}
+
+.home-wine-tours__img-transition-default{
+    display: none;
+}
+
+.home-wine-tours__cta-button,
+.home-vehicle-hire__cta-button{
+    grid-column: 4 / -4;
+}
+
+@media (width >= 600px){
+
+    .background-image{
+        height: 700px;
+    }
+
+    .home-wine-tours__cta-button,
+    .home-wine-tours__img-transition-1,
+    .home-wine-tours__img-transition-2,
+    .home-wine-tours__img-transition-3{
+        display: none;
+    }
+
+    .home-wine-tours__img-button-1,
+    .home-wine-tours__img-button-2,
+    .home-wine-tours__img-button-3{
+        grid-column: span 5;
+        grid-row: span 2;
+    }
+    
+    .home-wine-tours__img-transition-default{
+        display: block;
+        grid-column: span 7;
+        grid-row: span 6;
+    }
+
+    .home-vehicle-hire__image{
+        grid-column: span 6;
+        grid-row: span 2;
+    }
+
+    .home-vehicle-hire__text{
+        grid-column: span 6;
+    }
+
+    .home-vehicle-hire__cta-button{
+        grid-column: 11 / 13;
+    }
+
+    .home-reviews__img-card-1,
+    .home-reviews__img-card-2,
+    .home-reviews__img-card-3{
+        grid-column: span 4;
+        grid-row: span 4;
+    }
+}
+
+/* LAYOUT - Wine Tours Page */
+
+.wine-tour__cta-button{
+    grid-column: 4 / -4;
+}
+
+@media (width >= 600px){
+    .wine-tour__cta-button{
+        grid-column: 6 / -6;
+    }
+}
+
+/* LAYOUT - Vehicle Hire Page */
+
+.vehicle-hire__image-thirteen{
+    display: flex;
+    justify-content: center;
+}
+
+.vehicle-hire__image-twenty{
+    display: flex;
+    justify-content: center;
+}
+
+.vehicle-hire__cta-button{
+    grid-column: 4 / -4;
+}
+
+@media (width >= 600px){
+    .vehicle-hire__image-thirteen{
+        display: flex;
+        justify-content: center;
+        grid-column: 1 / 6;
+    }
+
+    .vehicle-hire__image-twenty{
+        display: flex;
+        justify-content: center;
+        grid-column: 7 / 13;
+    }
+    
+    .vehicle-hire__cta-button{
+        grid-column: 6 / -6;
+    }
+}
+
+/* LAYOUT - Contact Us Page */
+
+.contact-us__cta-button{
+    grid-column: 4 / -4;
+}
+
+@media (width >= 600px){
+
+    .contact-us__input-name,
+    .contact-us__input-email,
+    .contact-us__input-query{
+        grid-column: 3 / -3;
+    }
+
+    .contact-us__cta-button{
+        grid-column: 6 / -6;
+    }
+}
+
+/* LAYOUT - FAQ Page*/
+
+@media (width >= 600px){
+    .faq__expand{
+        grid-column: 3 / -3;
+    }
+}
+
+/* LAYOUT - About Us Page */
+
+@media (width >= 600px){
+    .about-us__image{
+        grid-column: 1 / 5;
+    }
+    .about-us__text{
+        grid-column: 5 / 13;
+    }
+}
+
+/* TYPOGRAPHY */
+
+h1, h2, h3 {
+    font-family: bebas-neue, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    font-family: avory-i-latin, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+    font-family: avory-i-latin, sans-serif;
+}
+
+/* COMPONENTS */
+
+img{
+    max-width: 100%;
+}
+
+.cta-button {
+    background-color: #7596B8;
+    border-color: #7596B8;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: "avory-i-latin", sans-serif;
+    font-weight: 800;
+    font-size: 0.8em;
+    padding: 0.75em 0;
+    border-radius: 0.75em;
+    margin: 1.5em 0;
+}
+
+.circle-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
+
+@media (width >= 600px) {
+    .circle-image {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    }   
+}
+
+/* COMPONENTS - GLOBAL HEADER */
+
+.global-nav__links ul{
+    display: flex;
+    justify-content: end;
+    gap: 1.5em;
+}
+
+.global-nav__links{
+    margin: auto 0;;
+}
+
+/* COMPONENTS - GLOBAL FOOTER */
+
+.global-footer__copyright{
+    margin: 0 auto;
+}
+
+.global-footer__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+@media (width >= 600px) {
+    .global-footer__links{
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+    }   
+}
+
+/* COMPONENTS HOME PAGE */
+
+.site-hero__slogan{
+    color: white;
+    justify-self: center;
+    font-size: 1.1em;
+    align-self: center;
+}
+
+.img-button {
+    background-color: rgb(90, 80, 174, 0.5);
+    border: rgb(90, 80, 174, 0.5);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: "avory-i-latin", sans-serif;
+    font-weight: 800;
+    font-size: 0.8em;
+    padding: 0.75em 0;
+    border-radius: 0.75em;
+    margin: 1.5em 0;
+}
+
+.map-frame{
+    border-radius: 0.75em;
+    border: 2px solid rgb(90, 80, 174, 0.5);
+    display: flex;
+    justify-content: center;
+}
+
+.home-wine-tours__map-image{
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (width >= 600px) {
+    .site-hero__slogan{
+        justify-self: left;
+        font-size: 2rem;
+    }
+}

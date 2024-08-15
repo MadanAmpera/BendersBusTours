@@ -8,24 +8,15 @@
     border: 1px solid black;
 }
 
-body{
-    background: rgb(84, 85, 64);
-}
-
 /*LAYOUT*/
 
 .max-width,
 footer > .max-width {
     width: 100%;
-    max-width: 1024px;
+    /* max-width: 1024px; */
     padding: 1em;
     /* Common background color for both */
-    background: rgb(84, 85, 64);
-}
-
-footer > .max-width {
-    /* Override background color for the footer */
-    background: rgb(84, 85, 64);;
+    background: #FFFFFF;
 }
 
 .max-width-container{
@@ -45,6 +36,16 @@ footer > .max-width {
 
 
 /* LAYOUT - Global Header*/
+
+header > .max-width {
+    /* Override background color for the footer */
+    background: #545540;
+}
+
+.logo-image{
+    width: 50%;
+    height: auto;
+}
 
 .global-nav{
     display: grid;
@@ -84,6 +85,11 @@ footer > .max-width {
 
 /* LAYOUT - Global Footer */
 
+footer > .max-width {
+    /* Override background color for the footer */
+    background: #545540;
+}
+
 .global-footer__grid{
     display: grid;
     gap: 2em;
@@ -102,7 +108,7 @@ footer > .max-width {
 /* LAYOUT - Home Page */
 
 .background-image{
-    background-image: url('../img/hero.gif');
+    background-image: url('../resources/img/hero.gif');
     background-size: cover;
     height: 300px;
 }
@@ -262,23 +268,33 @@ footer > .max-width {
 
 /* TYPOGRAPHY */
 
+@font-face {
+    font-family: "Canela";
+    src: url('../resources/fonts/Canela-Regular-Trial.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "AtlasGrotesk";
+    src: url('../resources/fonts/AtlasGrotesk-Regular.otf') format("opentype");
+}
+
 h1, h2, h3 {
-    font-family: bebas-neue, sans-serif;
+    font-family: "Canela", Times, serif;
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
 }
 
 p {
-    font-family: avory-i-latin, sans-serif;
+    font-family: "AtlasGrotesk", Helvetica, sans-serif;
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: 1rem;
 }
 
 li a {
-    color: black;
+    color: #FFFFFF;
     text-decoration: none;
-    font-family: avory-i-latin, sans-serif;
+    font-family: "Canela", Times, serif;
 }
 
 /* COMPONENTS */
@@ -288,17 +304,22 @@ img{
 }
 
 .cta-button {
-    background-color: #7596B8;
-    border-color: #7596B8;
-    color: white;
+    background-color: #FFFFFF;
+    border: 1px solid #bdbdbd;
+    color: #545540;
     text-decoration: none;
     text-align: center;
-    font-family: "avory-i-latin", sans-serif;
-    font-weight: 800;
-    font-size: 0.8em;
+    font-family: "AtlasGrotesk", Helvetica, sans-serif;
+    font-size: 13px;
     padding: 0.75em 0;
-    border-radius: 0.75em;
+    border-radius: 40px;
     margin: 1.5em 0;
+}
+
+.cta-button:hover {
+    background-color: #7596B8;
+    border: 1px solid #7596B8;
+    color: #FFFFFF;
 }
 
 .circle-image {

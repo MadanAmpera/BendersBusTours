@@ -290,6 +290,11 @@ footer > .max-width {
     src: url('../resources/fonts/MADE-Mirage-Regular.otf') format("opentype");
 }
 
+@font-face {
+    font-family: "Bon Vivant";
+    src: url('../resources/fonts/BonVivant-Regular.otf') format("opentype");
+}
+
 h1, h2, h3 {
     font-family: "MADE Mirage", Times, serif;
     color: #545540;

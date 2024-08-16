@@ -43,7 +43,7 @@ header > .max-width {
 }
 
 .logo-image{
-    width: 50%;
+    width: 75%;
     height: auto;
 }
 
@@ -99,6 +99,7 @@ footer > .max-width {
 
 .global-footer__copyright{
     grid-area: copyright;
+    color: #FFFFFF;
 }
 
 .global-footer__links{
@@ -138,7 +139,7 @@ footer > .max-width {
 @media (width >= 600px){
 
     .background-image{
-        height: 700px;
+        height: 100vh;
     }
 
     .home-wine-tours__cta-button,
@@ -278,14 +279,26 @@ footer > .max-width {
     src: url('../resources/fonts/AtlasGrotesk-Regular.otf') format("opentype");
 }
 
+@font-face {
+    font-family: "Cheyenne Sans";
+    src: url('../resources/fonts/CheyenneSans-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "MADE Mirage";
+    src: url('../resources/fonts/MADE-Mirage-Regular.otf') format("opentype");
+}
+
 h1, h2, h3 {
-    font-family: "Canela", Times, serif;
+    font-family: "MADE Mirage", Times, serif;
+    color: #545540;
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
 }
 
 p {
-    font-family: "AtlasGrotesk", Helvetica, sans-serif;
+    font-family: "Cheyenne Sans", Helvetica, sans-serif;
+    color: #545540;
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: 1rem;
@@ -294,7 +307,7 @@ p {
 li a {
     color: #FFFFFF;
     text-decoration: none;
-    font-family: "Canela", Times, serif;
+    font-family: "MADE Mirage", Times, serif;
 }
 
 /* COMPONENTS */

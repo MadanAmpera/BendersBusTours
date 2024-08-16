@@ -13,7 +13,7 @@
 .max-width,
 footer > .max-width {
     width: 100%;
-    /* max-width: 1024px; */
+    max-width: 1024px;
     padding: 1em;
     /* Common background color for both */
     background: #FFFFFF;
@@ -153,13 +153,13 @@ footer > .max-width {
     .home-wine-tours__img-button-1,
     .home-wine-tours__img-button-2,
     .home-wine-tours__img-button-3{
-        grid-column: span 5;
+        grid-column: span 6;
         grid-row: span 2;
     }
     
     .home-wine-tours__img-transition-default{
         display: block;
-        grid-column: span 7;
+        grid-column: span 6;
         grid-row: span 6;
     }
 
@@ -399,23 +399,16 @@ img{
     align-self: center;
 }
 
-.img-button {
-    background-color: rgb(90, 80, 174, 0.5);
-    border: rgb(90, 80, 174, 0.5);
+.info-card {
+    background-color: #545540;
+    border: #545540;
     color: white;
-    text-decoration: none;
-    text-align: center;
-    font-family: "avory-i-latin", sans-serif;
-    font-weight: 800;
-    font-size: 0.8em;
-    padding: 0.75em 0;
     border-radius: 0.75em;
-    margin: 1.5em 0;
 }
 
-.map-frame{
+.img-frame{
     border-radius: 0.75em;
-    border: 2px solid rgb(90, 80, 174, 0.5);
+    border: 2px solid #545540;
     display: flex;
     justify-content: center;
 }

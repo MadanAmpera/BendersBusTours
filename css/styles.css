@@ -42,11 +42,6 @@ header > .max-width {
     background: #545540;
 }
 
-.logo-image{
-    width: 75%;
-    height: auto;
-}
-
 .global-nav{
     display: grid;
     grid-template-columns: 2em 1fr 2em;
@@ -62,6 +57,8 @@ header > .max-width {
     grid-area: logo;
     justify-self: center;
     align-self: center;
+    width: 75%;
+    height: auto;
 }
 
 .global-nav__links{
@@ -77,9 +74,13 @@ header > .max-width {
     .global-nav__links{
         display: block;
     }
-
     .global-nav__hamburger-button{
         display: none;
+    }
+    .global-nav__logo{
+        width: 50%;
+        height: auto;
+        justify-self: flex-start;
     }
 }
 

@@ -322,6 +322,11 @@ img{
     max-width: 100%;
 }
 
+.img-frame{
+    border-radius: 0.75em;
+    border: 10px solid #545540;
+}
+
 .cta-button {
     background-color: #FFFFFF;
     border: 1px solid #bdbdbd;
@@ -346,6 +351,11 @@ img{
     height: 200px;
     border-radius: 50%;
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
+
+.drop-down-svg{
+    height: 40px;
+    width: 40px;
 }
 
 @media (width >= 600px) {
@@ -404,14 +414,20 @@ img{
     border: #545540;
     color: white;
     border-radius: 0.75em;
+    padding: 0.5rem;
     display: flex;
 }
 
-.img-frame{
-    border-radius: 0.75em;
-    border: 10px solid #545540;
+.wine-tour-info-heading > h3{
+    margin-bottom: 0rem;
+}
+
+.wine-tour-info-heading{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .home-wine-tours__map-image{

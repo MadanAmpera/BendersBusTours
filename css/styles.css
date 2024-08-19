@@ -8,10 +8,6 @@
     border: 1px solid black;
 }
 
-body{
-    background: rgb(84, 85, 64);
-}
-
 /*LAYOUT*/
 
 .max-width,
@@ -20,12 +16,7 @@ footer > .max-width {
     max-width: 1024px;
     padding: 1em;
     /* Common background color for both */
-    background: rgb(84, 85, 64);
-}
-
-footer > .max-width {
-    /* Override background color for the footer */
-    background: rgb(84, 85, 64);;
+    background: #FFFFFF;
 }
 
 .max-width-container{
@@ -46,6 +37,11 @@ footer > .max-width {
 
 /* LAYOUT - Global Header*/
 
+header > .max-width {
+    /* Override background color for the footer */
+    background: #545540;
+}
+
 .global-nav{
     display: grid;
     grid-template-columns: 2em 1fr 2em;
@@ -61,6 +57,8 @@ footer > .max-width {
     grid-area: logo;
     justify-self: center;
     align-self: center;
+    width: 75%;
+    height: auto;
 }
 
 .global-nav__links{
@@ -76,13 +74,22 @@ footer > .max-width {
     .global-nav__links{
         display: block;
     }
-
     .global-nav__hamburger-button{
         display: none;
+    }
+    .global-nav__logo{
+        width: 50%;
+        height: auto;
+        justify-self: flex-start;
     }
 }
 
 /* LAYOUT - Global Footer */
+
+footer > .max-width {
+    /* Override background color for the footer */
+    background: #545540;
+}
 
 .global-footer__grid{
     display: grid;
@@ -93,6 +100,7 @@ footer > .max-width {
 
 .global-footer__copyright{
     grid-area: copyright;
+    color: #FFFFFF;
 }
 
 .global-footer__links{
@@ -102,7 +110,7 @@ footer > .max-width {
 /* LAYOUT - Home Page */
 
 .background-image{
-    background-image: url('../img/hero.gif');
+    background-image: url('../resources/img/hero.gif');
     background-size: cover;
     height: 300px;
 }
@@ -132,7 +140,7 @@ footer > .max-width {
 @media (width >= 600px){
 
     .background-image{
-        height: 700px;
+        height: 100vh;
     }
 
     .home-wine-tours__cta-button,
@@ -145,13 +153,13 @@ footer > .max-width {
     .home-wine-tours__img-button-1,
     .home-wine-tours__img-button-2,
     .home-wine-tours__img-button-3{
-        grid-column: span 5;
+        grid-column: span 6;
         grid-row: span 2;
     }
     
     .home-wine-tours__img-transition-default{
         display: block;
-        grid-column: span 7;
+        grid-column: span 6;
         grid-row: span 6;
     }
 
@@ -262,23 +270,50 @@ footer > .max-width {
 
 /* TYPOGRAPHY */
 
+@font-face {
+    font-family: "Canela";
+    src: url('../resources/fonts/Canela-Regular-Trial.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "AtlasGrotesk";
+    src: url('../resources/fonts/AtlasGrotesk-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "Cheyenne Sans";
+    src: url('../resources/fonts/CheyenneSans-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "MADE Mirage";
+    src: url('../resources/fonts/MADE-Mirage-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "Bon Vivant";
+    src: url('../resources/fonts/BonVivant-Regular.otf') format("opentype");
+}
+
 h1, h2, h3 {
-    font-family: bebas-neue, sans-serif;
+    font-family: "MADE Mirage", Times, serif;
+    color: #545540;
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
 }
 
 p {
-    font-family: avory-i-latin, sans-serif;
+    font-family: "Cheyenne Sans", Helvetica, sans-serif;
+    color: #545540;
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: 1rem;
 }
 
 li a {
-    color: black;
+    color: #FFFFFF;
     text-decoration: none;
-    font-family: avory-i-latin, sans-serif;
+    font-family: "MADE Mirage", Times, serif;
 }
 
 /* COMPONENTS */
@@ -287,18 +322,28 @@ img{
     max-width: 100%;
 }
 
+.img-frame{
+    border-radius: 0.75em;
+    border: 10px solid #545540;
+}
+
 .cta-button {
-    background-color: #7596B8;
-    border-color: #7596B8;
-    color: white;
+    background-color: #FFFFFF;
+    border: 1px solid #bdbdbd;
+    color: #545540;
     text-decoration: none;
     text-align: center;
-    font-family: "avory-i-latin", sans-serif;
-    font-weight: 800;
-    font-size: 0.8em;
+    font-family: "AtlasGrotesk", Helvetica, sans-serif;
+    font-size: 13px;
     padding: 0.75em 0;
-    border-radius: 0.75em;
+    border-radius: 40px;
     margin: 1.5em 0;
+}
+
+.cta-button:hover {
+    background-color: #7596B8;
+    border: 1px solid #7596B8;
+    color: #FFFFFF;
 }
 
 .circle-image {
@@ -306,6 +351,11 @@ img{
     height: 200px;
     border-radius: 50%;
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
+
+.drop-down-svg{
+    height: 40px;
+    width: 40px;
 }
 
 @media (width >= 600px) {
@@ -359,28 +409,29 @@ img{
     align-self: center;
 }
 
-.img-button {
-    background-color: rgb(90, 80, 174, 0.5);
-    border: rgb(90, 80, 174, 0.5);
+.info-card {
+    background-color: #545540;
+    border: #545540;
     color: white;
-    text-decoration: none;
-    text-align: center;
-    font-family: "avory-i-latin", sans-serif;
-    font-weight: 800;
-    font-size: 0.8em;
-    padding: 0.75em 0;
     border-radius: 0.75em;
-    margin: 1.5em 0;
+    padding: 0.5rem;
+    display: flex;
 }
 
-.map-frame{
-    border-radius: 0.75em;
-    border: 2px solid rgb(90, 80, 174, 0.5);
+.wine-tour-info-heading > h3{
+    margin-bottom: 0rem;
+}
+
+.wine-tour-info-heading{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .home-wine-tours__map-image{
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }

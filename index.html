@@ -11,7 +11,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="https://use.typekit.net/zyv7ruz.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -20,16 +19,16 @@
         <header class="global-header max-width-container">
             <nav class="global-nav max-width">
                 <div class="global-nav__hamburger-button">
-                    <img src="img/hamburger.png">
+                    <img src="resources/img/hamburger-menu.svg" alt="hamburger menu">
                 </div>
-                <div class="global-nav__logo">
-                    <img src="img/Benders_Logo.png">
-                </div>
+                <a class="global-nav__logo" href="index.html">
+                    <img src="resources/img/Benders-Logo-Cropped.png" alt="Benders Bus Tours logo">
+                </a>
                 <div class="global-nav__links">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
                         <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact-us.html" style="font-family: Bon Vivant;">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
@@ -43,17 +42,23 @@
             </section>
             <section class="home-wine-tours max-width-container border">
                 <div class="section-grid max-width border">
-                    <h2 class="home-wine-tours__heading border">Wine Tours</h2>
-                    <div class="home-wine-tours__img-button-1 img-button border">home-wine-tours__img-button-1</div>
-                    <div class="home-wine-tours__img-transition-default map-frame">
-                        <img class="home-wine-tours__map-image" src="img/default-map-purple.png" alt="map of Adelaide highlighting wine regions">
+                    <h2 class="home-wine-tours__heading">Wine Tours</h2>
+                    <div class="home-wine-tours__img-button-1 info-card border">
+                        <div id="BarossaSectionHeader" class="wine-tour-info-heading">
+                            <h3 style="color: #FFFFFF; font-family: 'Cheyenne Sans', Helvetica, sans-serif;">Barossa</h3>
+                            <img id="BarossaSectionDropDown" src="resources/img/arrow-drop-down.svg" alt="section drop down" class="drop-down-svg" style="display: none;">
+                            <img id="BarossaSectionDropUp" src="resources/img/arrow-drop-up.svg" alt="section drop up" class="drop-down-svg">
+                        </div>
+                    </div>
+                    <div class="home-wine-tours__img-transition-default img-frame">
+                        <img class="home-wine-tours__map-image" src="https://imageplaceholder.net/600" alt="map of Adelaide highlighting wine regions">
                     </div>
                     <div class="home-wine-tours__img-transition-1 img-transition border">home-wine-tours__img-transition-1</div>
                     <a href="barossa-wine-tours.html" class="home-wine-tours__cta-button cta-button border">home-wine-tours__cta-button</a>
-                    <div class="home-wine-tours__img-button-2 img-button border">home-wine-tours__img-button-2</div>
+                    <div class="home-wine-tours__img-button-2 info-card border">home-wine-tours__img-button-2</div>
                     <div class="home-wine-tours__img-transition-2 img-transition border">home-wine-tours__img-transition-2</div>
                     <a href="mclaren-vale-wine-tours.html" class="home-wine-tours__cta-button cta-button border">home-wine-tours__cta-button</a>
-                    <div class="home-wine-tours__img-button-3 img-button border">home-wine-tours__img-button-3</div>
+                    <div class="home-wine-tours__img-button-3 info-card border">home-wine-tours__img-button-3</div>
                     <div class="home-wine-tours__img-transition-3 img-transition border">home-wine-tours__img-transition-3</div>
                     <a href="adelaide-hills-wine-tours.html" class="home-wine-tours__cta-button cta-button border">home-wine-tours__cta-button</a>
                 </div>
@@ -80,8 +85,8 @@
                 <p class="global-footer__copyright">Copyright 2024, Benders Bus Tours</p>
                 <ul class="global-footer__links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
                     <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
                 </ul>
             </div>
         </footer>

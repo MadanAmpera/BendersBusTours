@@ -8,12 +8,15 @@
     border: 1px solid black;
 }
 
+body{
+    background-color: #fff5e7;
+}
+
 /*LAYOUT*/
 
-.max-width,
-footer > .max-width {
+.max-width{
     width: 100%;
-    max-width: 1024px;
+    max-width: 1440px;
     padding: 1em;
     /* Common background color for both */
     background: #FFFFFF;
@@ -40,6 +43,7 @@ footer > .max-width {
 header > .max-width {
     /* Override background color for the footer */
     background: #545540;
+    max-width: 100vw;
 }
 
 .global-nav{
@@ -89,6 +93,7 @@ header > .max-width {
 footer > .max-width {
     /* Override background color for the footer */
     background: #545540;
+    max-width: 100vw;
 }
 
 .global-footer__grid{
@@ -112,7 +117,8 @@ footer > .max-width {
 .background-image{
     background-image: url('../resources/img/hero.gif');
     background-size: cover;
-    height: 300px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .site-hero__heading {
@@ -124,25 +130,19 @@ footer > .max-width {
     overflow: hidden;
 }
 
-.site-hero .home-about{
-    display: none;
+.site-hero .max-width{
+    max-width: 100vw;
 }
 
 .home-wine-tours__img-transition-default{
     display: none;
 }
 
-.home-wine-tours__cta-button,
-.home-vehicle-hire__cta-button{
-    grid-column: 4 / -4;
+.home-vehicle-hire_link{
+    justify-self: center;
 }
 
 @media (width >= 600px){
-
-    .background-image{
-        height: 100vh;
-    }
-
     .home-book-tour-link,
     .home-wine-tours__img-transition-1,
     .home-wine-tours__img-transition-2,
@@ -154,26 +154,27 @@ footer > .max-width {
     .home-wine-tours__img-button-2,
     .home-wine-tours__img-button-3{
         grid-column: span 6;
-        grid-row: span 2;
+        grid-row: span 1;
     }
     
     .home-wine-tours__img-transition-default{
         display: block;
         grid-column: span 6;
-        grid-row: span 6;
+        grid-row: span 3;
     }
 
     .home-vehicle-hire__image{
-        grid-column: span 6;
-        grid-row: span 2;
+        grid-column: span 4;
+        grid-row: span 1;
     }
 
     .home-vehicle-hire__text{
-        grid-column: span 6;
+        grid-column: 6 / 12;
+        align-self: center;
     }
-
-    .home-vehicle-hire__cta-button{
-        grid-column: 11 / 13;
+    .home-vehicle-hire_link{
+        grid-column: 12 / 13;
+        align-self: self-end;
     }
 
     .home-reviews__img-card-1,
@@ -327,6 +328,12 @@ img{
     border: 10px solid #545540;
 }
 
+.site-images{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .cta-button {
     background-color: #FFFFFF;
     border: 1px solid #bdbdbd;
@@ -365,6 +372,12 @@ img{
     line-clamp: 3;
     -webkit-box-orient: vertical;  
   }
+
+  .common-link {
+    font-family: "MADE Mirage", Times, serif;
+    color: #545540;
+    text-decoration: underline;
+}
 
 @media (width >= 600px) {
     .circle-image {
@@ -424,6 +437,7 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-self: center;
 }
 
 .wine-tour-info-heading > h3{
@@ -438,19 +452,12 @@ img{
     align-items: center;
 }
 
-.home-wine-tours__map-image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.home-book-tour-link-desktop{
+    align-self: flex-end;
 }
 
-.home-book-tour-link{
-    font-family: "MADE Mirage", Times, serif;
-    color: #545540;
-    text-decoration: none;
-    align-self: flex-end;
+.home-book-tour-link-mobile{
     justify-self: end;
-    text-decoration: underline;
 }
 
 .desktop-only-show,
@@ -474,7 +481,6 @@ img{
         min-height: 160px;
     }
     .info-card:hover {
-        border: 1px solid rgb(84, 85, 64, 0.5);
         background-color: rgb(84, 85, 64, 0.5);
     }
     .desktop-only-show {
@@ -487,5 +493,8 @@ img{
     .mobile-only-show,
     .mobile-only-hide{
         display: none;
+    }
+    .home-bus-hire-link{
+        justify-self: end;
     }
 }

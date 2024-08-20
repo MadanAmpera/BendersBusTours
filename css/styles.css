@@ -473,9 +473,12 @@ img{
         max-height: 160px;
         min-height: 160px;
     }
+    .info-card:hover {
+        border: 1px solid rgb(84, 85, 64, 0.5);
+        background-color: rgb(84, 85, 64, 0.5);
+    }
     .desktop-only-show {
         display: -webkit-box;
-        color: #FFFFFF;
         margin-bottom: 0rem;
     }
     .desktop-only-hide{

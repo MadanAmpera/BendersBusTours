@@ -451,6 +451,7 @@ img{
     color: #545540;
     text-decoration: none;
     align-self: flex-end;
+    justify-self: end;
     text-decoration: underline;
 }
 

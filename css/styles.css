@@ -418,9 +418,7 @@ img{
 }
 
 .info-card {
-    background-color: #545540;
-    border: #545540;
-    color: white;
+    border: 1px solid #545540;
     border-radius: 0.75em;
     padding: 0.5rem;
     display: flex;

@@ -43,24 +43,69 @@
             <section class="home-wine-tours max-width-container border">
                 <div class="section-grid max-width border">
                     <h2 class="home-wine-tours__heading">Wine Tours</h2>
-                    <div class="home-wine-tours__img-button-1 info-card border">
-                        <div id="BarossaSectionHeader" class="wine-tour-info-heading">
+                    <!-- Barossa Info -->
+                    <div id="BarossaInfoCard" class="home-wine-tours__img-button-1 info-card">
+                        <div id="BarossaInfoHeading" class="wine-tour-info-heading">
                             <h3 style="color: #FFFFFF; font-family: 'Cheyenne Sans', Helvetica, sans-serif;">Barossa</h3>
-                            <img id="BarossaSectionDropDown" src="resources/img/arrow-drop-down.svg" alt="section drop down" class="drop-down-svg" style="display: none;">
-                            <img id="BarossaSectionDropUp" src="resources/img/arrow-drop-up.svg" alt="section drop up" class="drop-down-svg">
+                            <img id="BarossaInfoDropDown" src="resources/img/arrow-drop-down.svg" alt="section drop down" class="drop-down-svg mobile-only-hide" onclick="showBarossaSectionOnly()">
+                            <img id="BarossaInfoDropUp" src="resources/img/arrow-drop-up.svg" alt="section drop up" class="drop-down-svg mobile-only-show">
                         </div>
+
+                        <p class="desktop-only-show line-clamp">
+                            There are so many opportunities for wine tasting in Barossa Valley, we simply couldn't put it all into one tour. You'll simply have to come back and do a second round with Bender Bus Tours if you want to experience all of the Barossa Valley.
+                        </p>
+                        <a href="barossa-wine-tours.html" class="home-book-tour-link desktop-only-show">Tour Details</a>
                     </div>
-                    <div class="home-wine-tours__img-transition-default img-frame">
+                    <div id="DefaultMapImage" class="home-wine-tours__img-transition-default img-frame desktop-only-show">
                         <img class="home-wine-tours__map-image" src="https://imageplaceholder.net/600" alt="map of Adelaide highlighting wine regions">
                     </div>
-                    <div class="home-wine-tours__img-transition-1 img-transition border">home-wine-tours__img-transition-1</div>
-                    <a href="barossa-wine-tours.html" class="home-wine-tours__cta-button cta-button border">home-wine-tours__cta-button</a>
-                    <div class="home-wine-tours__img-button-2 info-card border">home-wine-tours__img-button-2</div>
-                    <div class="home-wine-tours__img-transition-2 img-transition border">home-wine-tours__img-transition-2</div>
-                    <a href="mclaren-vale-wine-tours.html" class="home-wine-tours__cta-button cta-button border">home-wine-tours__cta-button</a>
-                    <div class="home-wine-tours__img-button-3 info-card border">home-wine-tours__img-button-3</div>
-                    <div class="home-wine-tours__img-transition-3 img-transition border">home-wine-tours__img-transition-3</div>
-                    <a href="adelaide-hills-wine-tours.html" class="home-wine-tours__cta-button cta-button border">home-wine-tours__cta-button</a>
+                    <div id="BarossaInfoMapImage" class="home-wine-tours__img-transition-1 img-frame mobile-only-show">
+                        <img class="home-wine-tours__map-image" src="https://imageplaceholder.net/600" alt="map of wineries in Barossa">
+                    </div>
+                    <p id="BarossaInfo" class="mobile-only-show">
+                        There are so many opportunities for wine tasting in Barossa Valley; we simply couldn't put it all into one tour. You'll simply have to come back and do a second round with Bender Bus Tours if you want to experience all of the Barossa Valley.
+                    </p>
+                    <a id="BarossaInfoButton" href="barossa-wine-tours.html" class="home-book-tour-link mobile-only-show">Tour Details</a>
+                    <!-- McLaren Vale Info -->
+                    <div id="McLarenInfoCard" class="home-wine-tours__img-button-2 info-card">
+                        <div id="McLarenValeInfoHeading" class="wine-tour-info-heading">
+                            <h3 style="color: #FFFFFF; font-family: 'Cheyenne Sans', Helvetica, sans-serif;">McLaren Vale</h3>
+                            <img id="McLarenValeInfoDropDown" src="resources/img/arrow-drop-down.svg" alt="section drop down" class="drop-down-svg mobile-only-show" onclick="showMclarenSectionOnly()">
+                            <img id="McLarenValeInfoDropUp" src="resources/img/arrow-drop-up.svg" alt="section drop up" class="drop-down-svg mobile-only-hide">
+                        </div>
+
+                        <p class="desktop-only-show line-clamp">
+                            You can't do wine tasting in Adelaide without visiting the McLaren Vale region. Much like our Barossa Valley tours, we couldn't narrow down all the marvelous wineries, cafes, and shops into one tour, so we've spread them out over two. There are a couple of destinations, however, that make appearances on both tours.
+                        </p>
+                        <a href="mclaren-vale-wine-tours.html" class="home-book-tour-link desktop-only-show">Tour Details</a>
+                    </div>
+                    <div id="McLarenValeInfoMapImage" class="home-wine-tours__img-transition-2 img-frame mobile-only-hide">
+                        <img class="home-wine-tours__map-image" src="https://imageplaceholder.net/600" alt="map of wineries in McLaren Vale">
+                    </div>
+                    <p id="McLarenValeInfo" class="mobile-only-hide">
+                        You can't do wine tasting in Adelaide without visiting the McLaren Vale region. Much like our Barossa Valley tours, we couldn't narrow down all the marvelous wineries, cafes, and shops into one tour, so we've spread them out over two. There are a couple of destinations, however, that make appearances on both tours.
+                    </p>
+                    <a id="McLarenValeInfoButton" href="mclaren-vale-wine-tours.html" class="home-book-tour-link mobile-only-hide">Tour Details</a>
+                    <!-- Adelaide Hills Info -->
+                    <div id="AdelaideHillsInfoCard" class="home-wine-tours__img-button-3 info-card">
+                        <div id="AdelaideHillsInfoHeading" class="wine-tour-info-heading">
+                            <h3 style="color: #FFFFFF; font-family: 'Cheyenne Sans', Helvetica, sans-serif;">Adelaide Hills</h3>
+                            <img id="AdelaideHillsInfoDropDown" src="resources/img/arrow-drop-down.svg" alt="section drop down" class="drop-down-svg mobile-only" onclick="showHillsSectionOnly()">
+                            <img id="AdelaideHillsInfoDropUp" src="resources/img/arrow-drop-up.svg" alt="section drop up" class="drop-down-svg mobile-only-hide">
+                        </div>
+
+                        <p class="desktop-only-show line-clamp">
+                            Our Adelaide Hills wine tour is second to none when it comes to sightseeing, incredible food, and wine tasting. Whether you're bringing a small group of close friends or you have a whole crew of excited wine enthusiasts, you're guaranteed to love this tour.
+                        </p>
+                        <a href="adelaide-hills-wine-tours.html" class="home-book-tour-link desktop-only-show">Tour Details</a>
+                    </div>
+                    <div id="AdelaideHillsInfoMapImage" class="home-wine-tours__img-transition-3 img-frame mobile-only-hide">
+                        <img class="home-wine-tours__map-image" src="https://imageplaceholder.net/600" alt="map of wineries in Adelaide Hills">
+                    </div>
+                    <p id="AdelaideHillsInfo" class="mobile-only-hide">
+                        Our Adelaide Hills wine tour is second to none when it comes to sightseeing, incredible food, and wine tasting. Whether you're bringing a small group of close friends or you have a whole crew of excited wine enthusiasts, you're guaranteed to love this tour.
+                    </p>
+                    <a id="AdelaideHillsInfoButton" href="adelaide-hills-wine-tours.html" class="home-book-tour-link mobile-only-hide">Tour Details</a>
                 </div>
             </section>
             <section class="home-vehicle-hire max-width-container border">
@@ -90,6 +135,112 @@
                 </ul>
             </div>
         </footer>
-        <script src="" async defer></script>
+        <script>
+            // Barossa section elements
+            const barossaArrowUp = document.getElementById("BarossaInfoDropUp");
+            const barossaArrowDown = document.getElementById("BarossaInfoDropDown");
+            const barossaMapImage = document.getElementById("BarossaInfoMapImage");
+            const barossaInfo = document.getElementById("BarossaInfo");
+            const barossaLink = document.getElementById("BarossaInfoButton");
+            
+            const arrayBarossaShow = [barossaArrowUp, barossaMapImage, barossaInfo, barossaLink];
+            //McLarenVale section elements
+            const mclarenArrowUp = document.getElementById("McLarenValeInfoDropUp");
+            const mclarenArrowDown = document.getElementById("McLarenValeInfoDropDown");
+            const mclarenMapImage = document.getElementById("McLarenValeInfoMapImage");
+            const mclarenInfo = document.getElementById("McLarenValeInfo");
+            const mclarenLink = document.getElementById("McLarenValeInfoButton");
+            
+            const arrayMclarenShow = [mclarenArrowUp, mclarenMapImage, mclarenInfo, mclarenLink];
+            //Adelaide Hill section elements
+            const hillsArrowUp = document.getElementById("AdelaideHillsInfoDropUp");
+            const hillsArrowDown = document.getElementById("AdelaideHillsInfoDropDown");
+            const hillsMapImage = document.getElementById("AdelaideHillsInfoMapImage");
+            const hillsInfo = document.getElementById("AdelaideHillsInfo");
+            const hillsLink = document.getElementById("AdelaideHillsInfoButton");
+
+            const arrayHillsShow = [hillsArrowUp, hillsMapImage, hillsInfo, hillsLink];
+
+            function showBarossaSectionOnly(){
+                
+                barossaArrowDown.classList.remove("mobile-only-show");
+                barossaArrowDown.classList.add("mobile-only-hide");
+
+                mclarenArrowDown.classList.remove("mobile-only-hide");
+                mclarenArrowDown.classList.add("mobile-only-show");
+
+                hillsArrowDown.classList.remove("mobile-only-hide");
+                hillsArrowDown.classList.add("mobile-only-show");
+
+                arrayBarossaShow.forEach(element => {
+                    element.classList.remove("mobile-only-hide");
+                    element.classList.add("mobile-only-show");
+                });
+                arrayMclarenShow.forEach(element => {
+                    element.classList.remove("mobile-only-show");
+                    element.classList.add("mobile-only-hide");
+                });
+                arrayHillsShow.forEach(element => {
+                    element.classList.remove("mobile-only-show");
+                    element.classList.add("mobile-only-hide");
+                });
+
+                document.getElementById("BarossaInfoCard").scrollIntoView();
+            }
+
+            function showMclarenSectionOnly(){
+                
+                barossaArrowDown.classList.remove("mobile-only-hide");
+                barossaArrowDown.classList.add("mobile-only-show");
+
+                mclarenArrowDown.classList.remove("mobile-only-show");
+                mclarenArrowDown.classList.add("mobile-only-hide");
+
+                hillsArrowDown.classList.remove("mobile-only-hide");
+                hillsArrowDown.classList.add("mobile-only-show");
+
+                arrayBarossaShow.forEach(element => {
+                    element.classList.remove("mobile-only-show");
+                    element.classList.add("mobile-only-hide");
+                });
+                arrayMclarenShow.forEach(element => {
+                    element.classList.remove("mobile-only-hide");
+                    element.classList.add("mobile-only-show");
+                });
+                arrayHillsShow.forEach(element => {
+                    element.classList.remove("mobile-only-show");
+                    element.classList.add("mobile-only-hide");
+                });
+
+                document.getElementById("McLarenInfoCard").scrollIntoView();
+            }
+
+            function showHillsSectionOnly(){
+
+                barossaArrowDown.classList.remove("mobile-only-hide");
+                barossaArrowDown.classList.add("mobile-only-show");
+
+                mclarenArrowDown.classList.remove("mobile-only-hide");
+                mclarenArrowDown.classList.add("mobile-only-show");
+
+                hillsArrowDown.classList.remove("mobile-only-show");
+                hillsArrowDown.classList.add("mobile-only-hide");
+
+                arrayBarossaShow.forEach(element => {
+                    element.classList.remove("mobile-only-show");
+                    element.classList.add("mobile-only-hide");
+                });
+                arrayMclarenShow.forEach(element => {
+                    element.classList.remove("mobile-only-show");
+                    element.classList.add("mobile-only-hide");
+                });
+                arrayHillsShow.forEach(element => {
+                    element.classList.remove("mobile-only-hide");
+                    element.classList.add("mobile-only-show");
+                });
+
+                document.getElementById("AdelaideHillsInfoCard").scrollIntoView();
+            }
+        </script>
     </body>
 </html>
